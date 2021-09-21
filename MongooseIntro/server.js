@@ -36,9 +36,7 @@ app.get("/products", async (req, res) => {
 //exec() complete the execution>>
 //lean()
 
-//step-5
-//patch
-
+//step-5 patch using Update
 app.patch("/products/:id", async (req, res) => {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true })
     return res.status(200).send({ product });
